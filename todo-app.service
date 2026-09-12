@@ -1,0 +1,12 @@
+[Unit]
+Description=My Todo App
+After=network.target
+
+[Service]
+User=sam
+WorkingDirectory=/home/sam/Todo-app
+ExecStart=/home/sam/Todo-app/venv/bin/python3 /home/sam/Todo-app/src/backend/app.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
